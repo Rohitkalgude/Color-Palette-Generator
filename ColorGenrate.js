@@ -30,9 +30,20 @@ function updatepalettedisplay(colors) {
     const color = colors[index];
     const colorDiv = box.querySelector(".color");
     const hexvalue = box.querySelector(".hex-value");
+    const Copybtn = document.querySelector(".copy-btn");
 
     colorDiv.style.backgroundColor = color;
     hexvalue.textContent = color;
+
+    Copybtn.onclick = () => {
+      navigator.clipboard.writeText(color).then(() => {
+        Copybtn.title = "copied!";
+
+        setTimeout(() => {
+          Copybtn.title = "copy to clipboard";
+        }, 1000);
+      });
+    };
   });
 }
 
