@@ -68,7 +68,7 @@ h1::after {
 .palette-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.9rem;
+  gap: 1.8rem;
   justify-content: flex-start;
   margin-left: 10px;
   margin-top: 2rem;
